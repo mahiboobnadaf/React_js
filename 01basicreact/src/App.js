@@ -1,4 +1,4 @@
- 
+import Touch from './Touch'
 
 function MyButton(){
   return (
@@ -12,6 +12,7 @@ function App() {
       <h1>Hello i am Mahiboob</h1>
       <h2>Welcom to React</h2>
       <MyButton />
+      <Touch />
 
     </>
   );
