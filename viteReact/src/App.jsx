@@ -8,14 +8,17 @@
  // <> Wrap your tags in this fragments </> 
 
 import Touch from './Touch'
-function App() {
 
+function App() {
+  const name = "Mahiboob"         // It is javascript variable here , when you access this name in render via 
+                                // using {} then its called Evaluated Expression .bcoz its the final value.
   return (
     <>
       <h1> Mahiboob with Vite</h1>
       <Touch />
+      {name}
     </>
   );
 }
 
-export default App
+export default App;
