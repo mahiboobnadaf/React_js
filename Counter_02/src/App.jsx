@@ -2,14 +2,14 @@ import './App.css'
 
 import { useState } from 'react'
 
-function App() {
+function App({increment}) {
   let [count,setCount]=useState(0)
   let add = () =>{
-    setCount(count+1);
+    setCount(count+increment);
     console.log("Count :"+count)
   }
-  let remove = () =>{
-    setCount(count-1);
+  let remove = (i=1) =>{
+    setCount(count-increment);
     console.log("Count :"+count)
   }
 
@@ -20,7 +20,6 @@ function App() {
       <button onClick={add}>Increment</button>
       <button onClick={remove}>Decrement</button>
       <br />
-    
     </>
   )
 }
