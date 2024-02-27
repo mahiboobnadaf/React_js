@@ -5,7 +5,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <App increment={1}/>
     <App increment={2}/>
-    <App increment={3}/>
   </React.StrictMode>,
 )

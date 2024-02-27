@@ -3,14 +3,19 @@ import './App.css'
 import { useState } from 'react'
 
 function App({increment}) {
-  let [count,setCount]=useState(0)
+  let [count,setCount]=useState(10)
+  
   let add = () =>{
     setCount(count+increment);
-    console.log("Count :"+count)
   }
-  let remove = (i=1) =>{
-    setCount(count-increment);
-    console.log("Count :"+count)
+
+  let remove = () =>{
+    if(count>=1){
+      setCount(count-increment);
+    }
+    else{
+      setCount(count=0)    
+    }
   }
 
   return (
