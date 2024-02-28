@@ -24,6 +24,9 @@ function App({increment}) {
       <h2>Counter : {count}</h2>
       <button onClick={add}>Increment</button>
       <button onClick={remove}>Decrement</button>
+      <h2>Counter : {count}</h2>
+      <button onClick={add}>Increment</button>
+      <button onClick={remove}>Decrement</button>
       <br />
     </>
   )
