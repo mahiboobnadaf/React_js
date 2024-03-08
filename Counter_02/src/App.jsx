@@ -3,7 +3,7 @@ import './App.css'
 import { useState } from 'react'
 
 function App({increment}) {
-  let [count,setCount]=useState(10)
+  let [count,setCount]=useState(0)
   
   let add = () =>{
     setCount(count+increment);
