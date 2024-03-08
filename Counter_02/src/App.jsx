@@ -6,7 +6,9 @@ function App({increment}) {
   let [count,setCount]=useState(0)
   
   let add = () =>{
-    setCount(count+increment);
+      
+      setCount(count+increment);
+    
   }
 
   let remove = () =>{
