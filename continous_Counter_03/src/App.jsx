@@ -16,7 +16,7 @@ function App() {
   }
   
   let increment=()=>{
-    setCount(count+=1)
+    setCount(count=>count+1)
     num=num+1
     console.log(num)
   }
