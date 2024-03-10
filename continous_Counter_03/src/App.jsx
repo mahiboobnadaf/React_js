@@ -6,23 +6,18 @@ function App() {
   let [count,setCount] = useState(0)
 
   let [timerId,setTimerId] = useState("")
-
-  
-  let num = count
   
   let start=()=>{
     let id = setInterval(increment,1000)
     setTimerId(id)
+    console.log(id)
   }
   
   let increment=()=>{
     setCount(count=>count+1)
-    num=num+1
-    console.log(num)
   }
   
   let stop=()=>{
-    // setCount(count-1)
     clearInterval(timerId)
   }
   return (
