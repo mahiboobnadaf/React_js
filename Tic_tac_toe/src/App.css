@@ -5,6 +5,7 @@
   text-align: center;
 }
 
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +40,9 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.Boxheight{
+  height: 30px;
+  width: 30px;
 }
