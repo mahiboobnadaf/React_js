@@ -2,22 +2,21 @@ import "../App.css"
 import { useState } from "react"
 
 let prev=''
+
     function Square(){
-        let [value,setValue] = useState(null)
+        let [value,setValue] = useState('')
+
     
         function handleClick(){
-           if(prev =='X'){
-            // prev='O'
+           if(prev =='X' && value==''){
             setValue(value='O')
             prev=value
-            // console.log(prev)
-
-           }else{
+           }
+           else{
             prev='X'
             setValue(value='X')
             prev=value
             console.log(prev)
-
            }
         }  
             
