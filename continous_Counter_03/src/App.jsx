@@ -10,7 +10,7 @@ function App() {
   let start=()=>{
     let id = setInterval(increment,1000)
     setTimerId(id)
-    console.log(id)
+    // console.log(id)
   }
   
   let increment=()=>{
