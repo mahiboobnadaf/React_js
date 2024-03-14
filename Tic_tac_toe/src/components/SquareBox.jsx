@@ -1,27 +1,26 @@
 import "../App.css"
 import { useState } from "react"
 
+let prev=''
     function Square(){
         let [value,setValue] = useState(null)
-        let [turn,setTurn] = useState(null)
-
-        
+    
         function handleClick(){
-            if(value=='X'){
-                setValue('0')
-            }
-            else if(value=='O'){
-                setValue('X')
-            }
-            else{
-                setValue(value='X')
-            }
-            console.log(value)
-           
+           if(prev =='X'){
+            // prev='O'
+            setValue(value='O')
+            prev=value
+            // console.log(prev)
+
+           }else{
+            prev='X'
+            setValue(value='X')
+            prev=value
+            console.log(prev)
+
+           }
         }  
-             
-        
-        
+            
         return (
             <button className='Boxheight' onClick={handleClick}>{value}</button>
         )
