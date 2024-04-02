@@ -17,3 +17,7 @@ To, run your project :
 
 
 Change yours files in src folder of project 
+
+Images are stored in project > src > assets 
+
+main.jsx will render app.jsx 
