@@ -1,8 +1,50 @@
-# React + Vite
+# Importing and Exporting Components
+The magic of components lies in their reusability: you can create components that are composed of other components. But as you nest more and more components, it often makes sense to start splitting them into different files. This lets you keep your files easy to scan and reuse components in more places.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Exporting and importing a component 
+What if you want to change the landing screen in the future and put a list of science books there? Or place all the profiles somewhere else? It makes sense to move Gallery and Profile out of the root component file. This will make them more modular and reusable in other files. You can move a component in three steps:
 
-Currently, two official plugins are available:
+    1. Make a new JS file to put the components in.
+    2. Export your function component from that file (using either default or named exports).
+    3. Import it in the file where you’ll use the component (using the corresponding technique for importing default or named exports).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Here both Profile and Gallery have been moved out of App.js into a new file called Gallery.js. Now you can change App.js to import Gallery from Gallery.js:
+
+# App.js
+import Gallery from './Gallery.js';
+
+export default function App() {
+  return (
+    <Gallery />
+  );
+}
+
+# Gallery.js
+function Profile() {
+  return (
+    <img
+      src="https://i.imgur.com/QIrZWGIs.jpg"
+      alt="Alan L. Hart"
+    />
+  );
+}
+
+export default function Gallery() {
+  return (
+    <section>
+      <h1>Amazing scientists</h1>
+      <Profile />
+      <Profile />
+      <Profile />
+    </section>
+  );
+}
+
+Notice how this example is broken down into two component files now:
+
+1. Gallery.js:
+    Defines the Profile component which is only used within the same file and is not exported.
+    Exports the Gallery component as a default export.
+2. App.js:
+    Imports Gallery as a default import from Gallery.js.
+    Exports the root App component as a default export.
