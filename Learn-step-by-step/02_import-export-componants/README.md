@@ -48,3 +48,6 @@ Notice how this example is broken down into two component files now:
 2. App.js:
     Imports Gallery as a default import from Gallery.js.
     Exports the root App component as a default export.
+
+# Exporting and importing multiple components from the same file 
+What if you want to show just one Profile instead of a gallery? You can export the Profile component, too. But Gallery.js already has a default export, and you can’t have two default exports. You could create a new file with a default export, or you could add a named export for Profile. "**A file can only have one default export, but it can have numerous named exports!**"
