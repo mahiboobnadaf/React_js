@@ -58,7 +58,7 @@ The Rules of JSX
     if you dont want to use extra <div> then wrap them into <> all tags </>.  <> </> is called FRAGMENTS.
 2. Close all the tags 
     JSX requires tags to be explicitly closed: self-closing tags like <img> must become <img />, and wrapping tags like <li>oranges must be written as <li>oranges</li>.
-    
+
 3. camelCase all most of the things! 
     JSX turns into JavaScript and attributes written in JSX become keys of JavaScript objects. In your own components, you will often want to read those attributes into variables. But JavaScript has limitations on variable names. For example, their names can’t contain dashes or be reserved words like class.
 
@@ -67,5 +67,5 @@ The Rules of JSX
     <img 
     src="https://i.imgur.com/yXOvdOSs.jpg" 
     alt="Hedy Lamarr" 
-    className="photo"
+->  className="photo"       
     />
