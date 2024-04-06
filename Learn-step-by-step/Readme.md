@@ -1,3 +1,5 @@
+# Go through Readme Files of each sections for Notes nd detailed understanding of Particular Concepts
+
 First create Vite or reactNext
 
 i will be using Vite for all projects 
